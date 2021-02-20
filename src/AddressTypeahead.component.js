@@ -18,7 +18,7 @@ type AddressInputType = {
 }
 const AddressTypeaheadComponent = (props: AddressInputType) => {
   const { searchStr, setSearchStr, fieldType, options, value } = props;
-  // console.log('props', props);
+ 
 
   if (!fieldType) {
     console.warn('No field type provide');
