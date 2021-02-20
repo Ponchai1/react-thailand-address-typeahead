@@ -13,13 +13,13 @@ This project fork from
 
 ## Installation
 ```
-$ npm install react react-thailand-address-typeahead
+$ npm i react-thailand-address-typeahead-ponchai
 ```
 
 ## Usage
 
 ```js
-import AddressFormTypeahead from 'react-thailand-address-typeahead';
+import AddressFormTypeahead from 'react-thailand-address-typeahead-ponchai';
 
 export default () => (
     <div>
