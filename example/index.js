@@ -42,5 +42,16 @@ storiesOf('Component', module)
         onAddressSelected={action('onSelectedAdress')}
       />
     </div>
+  ))
+  .add('custom initial', () => (
+    <div style={{ width: 350 }}>
+      <AddressForm
+        onAddressSelected={action('onSelectedAdress')}
+        values={{
+          d: "ฟากท่า", a: "ฟากท่า", p: "อุตรดิตถ์", z: 53160
+        }}
+      />
+      <code>{'<AddressForm onAddressSelected={action(\'onSelectedAdress\')} />'}</code>
+    </div>
   ));
 

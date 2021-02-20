@@ -51,7 +51,7 @@ const Typeahead: React.Component<TypeaheadInputType> = compose(
             }}
           >{props.displayOption(item)}
           </li>))}
-    </ul> : null}
+    </ul> :  null}
   </div>
 ));
 

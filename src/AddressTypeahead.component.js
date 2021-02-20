@@ -5,7 +5,6 @@ import React, { Component } from 'react';
 import Typeahead from './Typeahead.component';
 import { resolveResultbyField } from './finder';
 
-
 type AddressInputType = {
   // local state
   searchStr: string;
@@ -18,7 +17,9 @@ type AddressInputType = {
   renderResult: (data: any) => React.Component;
 }
 const AddressTypeaheadComponent = (props: AddressInputType) => {
-  const { searchStr, setSearchStr, fieldType, options } = props;
+  const { searchStr, setSearchStr, fieldType, options, value } = props;
+  // console.log('props', props);
+
   if (!fieldType) {
     console.warn('No field type provide');
     return <div />;
@@ -37,7 +38,7 @@ const AddressTypeaheadComponent = (props: AddressInputType) => {
 };
 
 const AddressTypeahead: Component<AddressInputType> = compose(
-  withState('searchStr', 'setSearchStr', ''),
+  withState('searchStr', 'setSearchStr', ({ value }) => value),
   lifecycle({
     componentWillReceiveProps(nextProps) {
       if (nextProps.value !== this.props.value) {
@@ -55,5 +56,7 @@ const AddressTypeahead: Component<AddressInputType> = compose(
     value: '',
   })),
 )(AddressTypeaheadComponent);
+
+
 
 export default AddressTypeahead;
