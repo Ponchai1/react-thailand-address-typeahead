@@ -10,7 +10,7 @@ type AddressInputType = {
   searchStr: string;
   option: string[];
   className: string;
-
+  placeholder : string;
   // external props
   fieldType: string;
   value: string;
@@ -18,7 +18,7 @@ type AddressInputType = {
   renderResult: (data: any) => React.Component;
 }
 const AddressTypeaheadComponent = (props: AddressInputType) => {
-  const { searchStr, setSearchStr, fieldType, options, className} = props;
+  const { searchStr, setSearchStr, fieldType, options, className, placeholder } = props;
   if (!fieldType) {
     console.warn('No field type provide');
     return <div />;
@@ -28,6 +28,7 @@ const AddressTypeaheadComponent = (props: AddressInputType) => {
       displayOption={props.renderResult}
       filterOption={fieldType}
       className={className}
+      placeholder={placeholder}
       options={options}
       maxVisible={5}
       value={searchStr}

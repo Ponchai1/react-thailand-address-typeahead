@@ -12,6 +12,12 @@ type AddressFormInputPropType = {
     };
     showLabel: {type:Boolean, default: true};
     classNameInput: string;
+    placeholder: {
+        a: string;
+        d: string;
+        p: string;
+        z: string;
+    };
     onAddressSelected: (addresObject) => void;
     renderResult: (data) => React.Component;
 }
@@ -49,6 +55,7 @@ class AddressForm extends React.Component {
               }
               <AddressTypeahead
                 className={this.props.classNameInput}
+                placeholder = {this.props.placeholder[fieldsEnum[key]]}
                 renderResult={this.props.renderResult}
                 onOptionSelected={(result) => {
                   this.setAddressObj(result);
