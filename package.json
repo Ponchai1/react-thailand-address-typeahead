@@ -1,6 +1,6 @@
 {
   "name": "react-thailand-address-typeahead-ponchai",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "main": "dist/index.js",
   "repository": {
     "url": "git@github.com:Ponchai1/react-thailand-address-typeahead.git",
