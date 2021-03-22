@@ -53,5 +53,17 @@ storiesOf('Component', module)
       />
       <code>{'<AddressForm onAddressSelected={action(\'onSelectedAdress\')} />'}</code>
     </div>
+  ))
+  .add('show label', () => (
+    <div style={{ width: 350 }}>
+      <AddressForm
+        showLabel={true}
+        onAddressSelected={action('onSelectedAdress')}
+        values={{
+          d: "ฟากท่า", a: "ฟากท่า", p: "อุตรดิตถ์", z: 53160
+        }}
+      />
+      <code>{'<AddressForm onAddressSelected={action(\'onSelectedAdress\')} />'}</code>
+    </div>
   ));
 

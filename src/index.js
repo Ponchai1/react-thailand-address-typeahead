@@ -10,6 +10,8 @@ type AddressFormInputPropType = {
         p: string;
         z: string;
     };
+    showLabel: {type:Boolean, default: true};
+    classNameInput: string;
     onAddressSelected: (addresObject) => void;
     renderResult: (data) => React.Component;
 }
@@ -41,8 +43,12 @@ class AddressForm extends React.Component {
           }
           return (
             <div key={key} className="typeahead-address-container">
-              <label className="typeahead-address-label" htmlFor="district">{name}</label>
+              { this.props.showLabel ?
+                <label className="typeahead-address-label" htmlFor="district">{name}</label>
+              : <label></label>
+              }
               <AddressTypeahead
+                className={this.props.classNameInput}
                 renderResult={this.props.renderResult}
                 onOptionSelected={(result) => {
                   this.setAddressObj(result);

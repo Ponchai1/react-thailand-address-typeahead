@@ -8,6 +8,7 @@ type TypeaheadInputType = {
     maxVisible: number;
     value: string;
     options: any[];
+    className: string;
     filterOptions: string;
     onChange: (e: any) => void;
     onOptionSelected: (option: any) => void;
@@ -31,6 +32,7 @@ const Typeahead: React.Component<TypeaheadInputType> = compose(
       onFocus={() => props.setOpen(true)}
       type="text" value={props.value}
       onChange={props.onChange}
+      className={props.className}
     />
     { props.options.length && props.value.length ? <input
       onChange={() => null}
