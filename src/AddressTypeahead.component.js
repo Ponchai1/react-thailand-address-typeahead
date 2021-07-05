@@ -30,7 +30,7 @@ const AddressTypeaheadComponent = (props: AddressInputType) => {
       className={className}
       placeholder={placeholder}
       options={options}
-      maxVisible={5}
+      maxVisible={20}
       value={searchStr}
       onChange={e => setSearchStr(e.target.value)}
       onOptionSelected={option => props.onOptionSelected(option)}
